@@ -1,25 +1,24 @@
-# Basic Calculator Program
+num1 = input("Enter first number: ")
+num2 = input("Enter second number: ")
+num1 = float(num1)
+num2 = float(num2)
 
-# Ask the user to input two numbers and an operator
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-operation = input("Enter an operation (+, -, *, /): ")
+op = input("Enter +, -, * or /: ")
 
-# Perform the calculation based on the operation
-if operation == "+":
-    result = num1 + num2
-    print(f"{num1} + {num2} = {result}")
-elif operation == "-":
-    result = num1 - num2
-    print(f"{num1} - {num2} = {result}")
-elif operation == "*":
-    result = num1 * num2
-    print(f"{num1} * {num2} = {result}")
-elif operation == "/":
+if op == "+":
+    answer = num1 + num2
+    print("The answer is", answer)
+elif op == "-":
+    answer = num1 - num2
+    print("The answer is", answer)
+elif op == "*":
+    answer = num1 * num2
+    print("The answer is", answer)
+elif op == "/":
     if num2 != 0:
-        result = num1 / num2
-        print(f"{num1} / {num2} = {result}")
+        answer = num1 / num2
+        print("The answer is", answer)
     else:
-        print("Error: Division by zero is not allowed.")
+        print("You can't divide by 0")
 else:
-    print("Invalid operation.")
+    print("Invalid operation")
